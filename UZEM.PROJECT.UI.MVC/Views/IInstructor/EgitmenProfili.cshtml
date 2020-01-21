@@ -1,0 +1,30 @@
+﻿@model UZEM_PROJECT.Model.InstructorClass
+@{
+    ViewBag.Title = "EgitmenProfili";
+    Layout = "~/Views/Shared/_LayoutEgitmenProfil.cshtml";
+}
+
+<h2>Eğitmen Profili</h2>
+
+<form class="contact-form" method="post">
+    <input type="text" name="FirstName" placeholder="First Name">
+    <input type="text" name="LastName" placeholder="Last Name">
+    <input type="email" name="Email" placeholder="E-mail">
+    <textarea name="Note" placeholder="Note"></textarea>
+    <input type="text" name="Cv" placeholder="Cv">
+    <button id="CvDosya" class=" form-control btn-danger">Dosya Yükle</button>
+    <br />
+    <input type="text" name="PromotionalVideo" placeholder="Promotional Video">
+    <button id="VideoDosya" class=" form-control btn-danger">Dosya Yükle</button>
+    <p>Özgeçmiş ve video yüklemek zorunludur.Eğitim videolarınızın tanıtım niteliğinde minimum 5 dakika maximum  20 dakika uzunluğunda videoları yükleyebilirsiniz  </p>
+    <button id="kaydet" class=" form-control btn-info">Kaydet</button>
+
+
+
+    <script>
+        $("#kaydet").click(function () {
+            alert("Eğitmen Ekleme İşlemi Tamamlandı");
+        });
+    </script>
+
+</form>

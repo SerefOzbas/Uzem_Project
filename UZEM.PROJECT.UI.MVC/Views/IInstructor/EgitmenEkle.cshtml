@@ -1,0 +1,47 @@
+﻿
+@model UZEM_PROJECT.Model.InstructorClass
+
+@{
+    ViewBag.Title = "EgitmenEkle";
+     Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+
+<h2>Eğitmen Ekle</h2>
+<form class="contact-form" method="post">
+
+    <input type="text" name="FirstName" value="@Model.FirstName" placeholder="FirstName">
+    <input type="text" name="LastName" value="@Model.LastName" placeholder="LastName">
+    <div>
+        <label>Profil Fotoğrafı:</label>
+        <input type="text" class="form-control" name="Ad" />
+        <br />
+        <input type="button" class="btn-danger" value="Dosya Seç" name="Ad" />
+        <input type="button" class="btn-danger" value="Kaldır" name="Ad" />
+
+    </div>
+
+    <br />
+    <div>
+        <label>S:</label>
+        <input type="text" class="form-control" name="Soyad" value="@Model.LastName" />
+
+    </div>
+
+
+    <div>
+        <label>Özgeçmiş</label>
+        <input type="text" class="form-control" name="CV" />
+
+    </div>
+    <br />
+
+    <div>
+        <button id="Kaydet" class="form-group btn-info">Eğitmen Olarak Kaydet</button>
+
+    </div>
+
+
+
+
+</form>

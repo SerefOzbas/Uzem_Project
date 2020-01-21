@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+   Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+@model UserClass
+<div class="row">
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-8">
+        <div class="contact-form-warp">
+            <div class="section-title text-white text-left">
+                <h2>Register</h2>
+            </div>
+            <form class="contact-form" method="post">
+                <input type="text" name="FirstName" placeholder="First Name" required>
+                <input type="text" name="LastName" placeholder="Last Name" required>
+                <input type="email" name="Email" placeholder="Your E-mail" required>
+                <input type="password" id="password" name="Password" placeholder="Password" style="height:57px;width:100%;padding:0 30px;margin-bottom:27px;float:left;border:none;font-size:14px;font-weight:500;background:#edf4f6;" required>
+                <input type="password" id="repeatpassword" name="Password" placeholder="Repeat Password" style="height:57px;width:100%;padding:0 30px;margin-bottom:27px;float:left;border:none;font-size:14px;font-weight:500;background:#edf4f6;" required>
+                <input type="submit" value="Save" class="site-btn" />
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-2">
+    </div>
+    <div class="panel-footer">
+        @if (ViewBag.Error != null)
+        {
+            <span>@ViewBag.Error</span>
+        }
+    </div>
+</div>
+<br />
+
+
+
+
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#repeatpassword').keyup(function () {
+                if ($('#password').val() != $('#repeatpassword').val()) {
+                    $(':input[type="submit"]').prop('disabled', true);
+                }
+                else {
+                    $(':input[type="submit"]').prop('disabled', false);
+                }
+            });
+        });
+    </script>
+}
